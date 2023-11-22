@@ -207,7 +207,6 @@ main .screen-actions .icon.fullscreen {
     padding-inline: calc(15% / 2);
     color: white;
     display: flex;
-    justify-content: space-between;
     gap: 5px;
     row-gap: 10px;
     flex-wrap: wrap;
@@ -215,7 +214,7 @@ main .screen-actions .icon.fullscreen {
 }
 
 .user-frame {
-    width: calc(100% / 7 - 5px);
+    flex-basis: 200px;
     /* height: calc(100% / 5 - 10px); */
 }
 
