@@ -58,6 +58,12 @@ nav .user-actions:first-child .action:nth-child(even) {
     font-size: 25px;
 }
 
+.nav-button:hover,
+.main-button:hover {
+    cursor: pointer;
+    color: lightcoral;
+}
+
 nav .icon.user-microphone::before {
     content: "\f130";
 }
@@ -75,6 +81,11 @@ nav .action .icon.more-options::before {
     font-weight: 900;
     content: "\f077";
     font-size: 10px;
+}
+
+nav .action .icon.more-options:hover {
+    color: green;
+    cursor: pointer;
 }
 
 nav .icon.user-camera::before {
@@ -123,6 +134,15 @@ nav .end-meeting {
     padding-inline: 15px;
 }
 
+nav .end-meeting:hover {
+    background-color: red;
+    cursor: pointer;
+}
+
+nav .end-meeting:hover .icon-name {
+    color: white;
+}
+
 nav .end-meeting .icon-name {
     color: red;
     text-transform: lowercase;
@@ -137,9 +157,10 @@ nav .end-meeting .icon-name::first-letter {
 main .screen-actions {
     position: absolute;
     top: 0;
-    right: 0;
+    right: 20px;
     color: white;
     margin-top: 10px;
+    z-index: 1;
 }
 
 main .screen-actions span:first-child {
@@ -170,7 +191,58 @@ main .screen-actions .icon.fullscreen {
 .main-button {
     margin-inline: 5px;
     padding: 5px;
-    background-color: #4A4A4A;
+    background-color: #4a4a4a77;
     border-radius: 5px;
+    text-transform: capitalize;
+}
+
+.main-button:hover {
+    color: white;
+    background-color: rgba(240, 128, 128, 0.5)
+}
+
+.content {
+    height: 100%;
+    padding-block: 100px;
+    padding-inline: calc(15% / 2);
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    gap: 5px;
+    row-gap: 10px;
+    flex-wrap: wrap;
+    overflow: auto;
+}
+
+.user-frame {
+    width: calc(100% / 7 - 5px);
+    /* height: calc(100% / 5 - 10px); */
+}
+
+.user-frame figure img {
+    width: 100%;
+    display: block;
+}
+
+.user-frame figure {
+    position: relative;
+}
+
+.user-frame .user-name {
+    position: absolute;
+    bottom: 0;
+    padding: 5px;
+    background-color: rgba(128, 128, 128, 0.7);
+}
+
+.icon.user-muted::before {
+    content: "\f131";
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    margin-right: 5px;
+}
+
+.user-frame .user-name span::after {
+    content: "pinco pallo";
     text-transform: capitalize;
 }
