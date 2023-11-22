@@ -30,6 +30,7 @@ nav {
     color: white;
     display: flex;
     justify-content: space-between;
+    align-items: center;
     background-color: #222222;
 }
 
@@ -44,22 +45,25 @@ nav .action {
     padding: 3px;
 }
 
-nav .user-actions .action:nth-child(even) {
+nav .user-actions:first-child .action:nth-child(even) {
     margin-right: 15px;
 }
 
-nav .icon.user-microphone::before {
+.nav-button {
     display: block;
     font-family: "Font Awesome 5 Free";
     font-weight: 900;
-    content: "\f130";
     font-size: 25px;
+}
+
+nav .icon.user-microphone::before {
+    content: "\f130";
 }
 
 nav .icon-name {
     display: block;
-    margin-top: 5px;
-    font-size: 12px;
+    margin-top: 10px;
+    font-size: 15px;
     text-transform: capitalize;
 }
 
@@ -72,14 +76,58 @@ nav .action .icon.more-options::before {
 }
 
 nav .icon.user-camera::before {
-    display: block;
-    font-family: "Font Awesome 5 Free";
-    font-weight: 900;
     content: "\f03d";
-    font-size: 25px;
 }
 
-nav .user-actions .end-meeting {
-    color: red;
+nav .icon.user-invite::before {
+    content: "\f234";
+}
+
+nav .icon.user-participants::before {
+    content: "\f500";
+}
+
+nav .icon.user-share-screen::before {
+    content: "\f14d";
+    color: #4BC800;
+}
+
+nav .icon.user-polling::before {
+    content: "\f681";
+}
+
+nav .user-actions:nth-child(2) .action {
+    margin-inline: 5px;
+}
+
+nav .icon.user-chat::before {
+    content: "\f27a";
+}
+
+nav .icon.user-record::before {
+    content: "\f8d9";
+}
+
+nav .icon.user-room::before {
+    content: "\f009";
+}
+
+nav .icon.user-more::before {
+    content: "\f141";
+}
+
+nav .end-meeting {
     background-color: #4A4A4A;
+    padding-inline: 15px;
+}
+
+nav .end-meeting .icon-name {
+    color: red;
+    text-transform: lowercase;
+    margin-top: 0;
+    line-height: 89px;
+}
+
+.end-meeting .icon-name::first-letter {
+    text-transform: capitalize;
 }
