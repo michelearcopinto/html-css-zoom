@@ -15,3 +15,71 @@ html {
     text-rendering: auto;
     -webkit-font-smoothing: antialiased;
 }
+
+body {
+    height: 100vh;
+    background-color: black;
+}
+
+nav {
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    background-color: #222222;
+}
+
+.user-actions {
+    padding: 15px;
+}
+
+nav .action {
+    display: inline-block;
+    text-align: center;
+    vertical-align: middle;
+    padding: 3px;
+}
+
+nav .user-actions .action:nth-child(even) {
+    margin-right: 15px;
+}
+
+nav .icon.user-microphone::before {
+    display: block;
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    content: "\f130";
+    font-size: 25px;
+}
+
+nav .icon-name {
+    display: block;
+    margin-top: 5px;
+    font-size: 12px;
+    text-transform: capitalize;
+}
+
+nav .action .icon.more-options::before {
+    display: block;
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    content: "\f077";
+    font-size: 10px;
+}
+
+nav .icon.user-camera::before {
+    display: block;
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    content: "\f03d";
+    font-size: 25px;
+}
+
+nav .user-actions .end-meeting {
+    color: red;
+    background-color: #4A4A4A;
+}
