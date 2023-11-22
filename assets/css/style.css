@@ -16,9 +16,10 @@ html {
     -webkit-font-smoothing: antialiased;
 }
 
-body {
+main {
     height: 100vh;
     background-color: black;
+    position: relative;
 }
 
 nav {
@@ -49,7 +50,8 @@ nav .user-actions:first-child .action:nth-child(even) {
     margin-right: 15px;
 }
 
-.nav-button {
+.nav-button,
+.main-button {
     display: block;
     font-family: "Font Awesome 5 Free";
     font-weight: 900;
@@ -128,6 +130,47 @@ nav .end-meeting .icon-name {
     line-height: 89px;
 }
 
-.end-meeting .icon-name::first-letter {
+nav .end-meeting .icon-name::first-letter {
+    text-transform: capitalize;
+}
+
+main .screen-actions {
+    position: absolute;
+    top: 0;
+    right: 0;
+    color: white;
+    margin-top: 10px;
+}
+
+main .screen-actions span:first-child {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+}
+
+main .screen-actions .icon.speaker-view::before {
+    font-family: "Font Awesome 5 Free";
+    content: "\f00a";
+    font-weight: 900;
+}
+
+main .screen-actions .icon.speaker-view {
+    display: inline;
+    font-size: 16px;
+}
+
+main .screen-actions .icon.fullscreen::before {
+    content: "\f31e";
+}
+
+main .screen-actions .icon.fullscreen {
+    display: inline;
+    font-size: 16px;
+}
+
+.main-button {
+    margin-inline: 5px;
+    padding: 5px;
+    background-color: #4A4A4A;
+    border-radius: 5px;
     text-transform: capitalize;
 }
