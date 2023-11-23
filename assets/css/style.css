@@ -207,15 +207,11 @@ main .screen-actions .icon.fullscreen {
     padding-inline: calc(15% / 2);
     color: white;
     display: flex;
-    gap: 5px;
-    row-gap: 10px;
+    gap: 10px;
+    row-gap: 15px;
+    justify-content: center;
     flex-wrap: wrap;
     overflow: auto;
-}
-
-.user-frame {
-    flex-basis: 200px;
-    /* height: calc(100% / 5 - 10px); */
 }
 
 .user-frame figure img {
